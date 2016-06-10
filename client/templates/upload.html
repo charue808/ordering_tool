@@ -1,0 +1,14 @@
+<template name="upload">
+	<h4 class="page-header">Upload file</h4>
+		<form class="form-control">
+		<select id="collection" class="form-control">
+			<option>Sales</option>
+			<option>Other</option>
+		</select>
+	{{#unless uploading}}
+		<input type="file" name="uploadCSV">
+	{{else}}
+		<p><i class="fa fa-spin fa-refresh"></i>Uploading file...</p>
+	{{/unless}}
+		</form>
+</template>
