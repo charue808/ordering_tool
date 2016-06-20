@@ -32,3 +32,4 @@ useraccounts:iron-routing
 houston:admin
 standard-minifier-css
 standard-minifier-js
+dburles:mongo-collection-instances

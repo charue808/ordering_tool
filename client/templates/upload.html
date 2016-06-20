@@ -1,14 +1,54 @@
 <template name="upload">
-	<h4 class="page-header">Upload file</h4>
-		<form class="form-control">
-		<select id="collection" class="form-control">
-			<option>Sales</option>
-			<option>Other</option>
-		</select>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<h1>Capstone</h1>
+				{{> publisher1}}
+			</div>
+			<div class="col-md-3">
+				<h1>Bearport</h1>
+				{{> publisher2}}
+			</div>
+			<div class="col-md-3">
+				<h1>Lerner</h1>
+				{{> publisher3}}
+			</div>
+			<div class="col-md-3">
+				<h1>Salem</h1>
+				{{> publisher4}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="publisher1">
 	{{#unless uploading}}
 		<input type="file" name="uploadCSV">
 	{{else}}
 		<p><i class="fa fa-spin fa-refresh"></i>Uploading file...</p>
 	{{/unless}}
-		</form>
+</template>
+
+<template name="publisher2">
+	{{#unless uploading}}
+		<input type="file" name="uploadCSV">
+	{{else}}
+		<p><i class="fa fa-spin fa-refresh"></i>Uploading file...</p>
+	{{/unless}}
+</template>
+
+<template name="publisher3">
+	{{#unless uploading}}
+		<input type="file" name="uploadCSV">
+	{{else}}
+		<p><i class="fa fa-spin fa-refresh"></i>Uploading file...</p>
+	{{/unless}}
+</template>
+
+<template name="publisher4">
+	{{#unless uploading}}
+		<input type="file" name="uploadCSV">
+	{{else}}
+		<p><i class="fa fa-spin fa-refresh"></i>Uploading file...</p>
+	{{/unless}}
 </template>

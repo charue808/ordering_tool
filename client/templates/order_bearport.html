@@ -1,0 +1,33 @@
+<template name="orderBearport">
+	<div class="container">
+		<div class="row">
+		<div class="col-md-12">
+		<h1>Bearport Order here</h1>
+		<table class="table table-hover">
+		<thead>
+			<th>Title</th>
+			<th>Series</th>
+			<th>Price</th>
+		</thead>
+		{{#each items}}
+			{{> bearportItems}}
+		{{/each}}
+		</table>
+		</div>
+		</div>
+	</div>
+</template>
+
+<template name="bearportItems">
+	<tbody>
+	<tr>
+		<td>
+			<h3>{{Title}}, {{Copyright}}</h3>
+		</td>
+		<td>
+			<h4>{{Series}}</h4>
+		</td>
+		<td>{{Your Price}}</td>
+	</tr>
+	</tbody>
+</template>
