@@ -11,12 +11,13 @@ Template.publisher1.helpers({
 Template.publisher1.events({
 	'change [name=uploadCSV]'(event, template) {
 		template.uploading.set(true);
-
+		/* attempt to create header 
 		var csvString = event.target.files[0];
 		var header = 'qty,series,title,ISBN,listPrice,yourPrice,copyright,grl,atos,lexile';
 		csvString = header+'\n'+csvString;
+		*/
 			//event.target.files[0]
-		Papa.parse(csvString, {
+		Papa.parse(event.target.files[0], {
 			header: true,
 			complete(results, file) {
 				Meteor.call('parseUpload1',results.data, ( error, response) => {

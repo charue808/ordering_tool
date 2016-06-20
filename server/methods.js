@@ -7,15 +7,13 @@ Meteor.methods({
       let item   = data[ i ];
 
       if ( item['Title'] ) {
-        Lerner.insert( item );
+        Mongo.Collection.get('capstone').insert( item );
       } else {
         console.warn( 'Rejected. Invalid item.' );
       }
     }
-  }
-});
+  },
 
-Meteor.methods({
   parseUpload2( data ) {
     check( data, Array );
 
@@ -26,15 +24,13 @@ Meteor.methods({
 
 
       if ( item['Title'] ) {
-        Bearport.insert( item );
+        Mongo.Collection.get('bearport').insert( item );
       } else {
         console.warn( 'Rejected. Invalid item.' );
       }
     }
-  }
-});
+  },
 
-Meteor.methods({
   parseUpload3( data ) {
     check( data, Array );
 
@@ -49,10 +45,8 @@ Meteor.methods({
         console.warn( 'Rejected. Invalid item.' );
       }
     }
-  }
-});
+  },
 
-Meteor.methods({
   parseUpload4( data ) {
     check( data, Array );
 
@@ -68,4 +62,6 @@ Meteor.methods({
       }
     }
   }
+
 });
+
