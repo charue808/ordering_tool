@@ -38,22 +38,29 @@
 <template name="bearportItems">
 	<tbody>
 		<tr>
-			<td>
-				<p>{{Title}}</p>
+			<td style="vertical-align: middle;">
+				<h4>{{Title}}</h4>
+				<div style="padding-top: 10px;">
+					<h5>
+						<span class="label label-info">ATOS: {{ATOS}}</span>
+						<span class="label label-info">Lexile: {{Lexile}}</span>
+						<span class="label label-info">Guided Reading Level: {{guidedReading}}</span>
+					</h5>
+				</div>
 			</td>
-			<td>
-				<p>{{Series}}</p>
+			<td style="vertical-align: middle;">
+				<h4>{{Series}}</h4>
 			</td>
-			<td>
-				<p>{{listPrice}}</p>
+			<td style="vertical-align:middle;">
+				<h4>{{listPrice}}</h4>
 			</td>
-			<td>
-				<p>{{yourPrice}}</p>
+			<td style="vertical-align: middle;">
+				<h4>{{yourPrice}}</h4>
 			</td>
-			<td>
+			<td style="vertical-align: middle;">
 				<input type="text" class="form-control" placeholder="0">
 			</td>
-			<td>
+			<td style="vertical-align: middle;">
 				<button type="submit" class="btn btn-primary">Add to Order</button>
 			</td>
 		</tr>

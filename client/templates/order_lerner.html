@@ -1,3 +1,51 @@
 <template name="orderLerner">
-	<h1>Order for lerner</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Sort tools</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<h4>Title</h4>
+			</div>
+			<div class="col-md-4">
+				<h4>Series</h4>
+			</div>
+			<div class="col-md-4">
+				<h4>Price & Quantity</h4>
+			</div>
+		</div>
+			{{#each items}}
+				{{> lernerItem}}
+			{{/each}}
+	</div>
+</template>
+
+<template name="lernerItem">
+	<div class="row">
+		<div class="col-md-4">
+			<h5>{{Title}}</h5>
+			<p>
+				<span class="label label-info">ATOS: {{ATOS}}</span>
+				<span class="label label-info">Lexile: {{Lexile}}</span>
+				<span class="label label-info">Guided Reading Level: {{GRL}}</span>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h5>{{Series}}</h5>
+		</div>
+		<div class="col-md-1">
+			<h5>{{price}}</h5>
+		</div>
+			<form class="form-inline">
+				<div class="form-group col-xs-2">
+					<label for="itemQty">QTY:</label>
+					<input type="text" id="itemQTY" placeholder="0">
+				</div>
+				<div class="col-md-1">
+				<button type="submit" class="btn btn-primary">Add to cart</button>
+				</div>
+			</form>
+	</div>
 </template>
